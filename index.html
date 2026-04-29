@@ -11,7 +11,7 @@
 <style>
 body{
     margin:0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background:#dfe6ee;
 }
 
@@ -19,11 +19,7 @@ body{
     background: linear-gradient(90deg,#5aa9ff,#e6a37c);
     padding:10px;
     color:white;
-}
-
-.header-top{
-    display:flex;
-    justify-content:space-between;
+    text-align:center;
 }
 
 .profile{
@@ -38,6 +34,7 @@ body{
     color:white;
     padding:12px;
     text-align:center;
+    font-weight:bold;
 }
 
 .grid{
@@ -52,9 +49,9 @@ body{
     border-radius:22px;
     height:110px;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
+    font-weight:bold;
 }
 </style>
 
@@ -63,9 +60,7 @@ body{
 <body>
 
 <div class="header">
-    <div class="header-top">
-        ☰ <b>RESS</b> 🔔
-    </div>
+    RESS App
 </div>
 
 <div class="profile">
@@ -78,13 +73,18 @@ body{
     <div class="box">Bio Data</div>
     <div class="box">Salary</div>
     <div class="box">NPS</div>
+    <div class="box">Tax</div>
+    <div class="box">Loan</div>
+    <div class="box">Leave</div>
 </div>
 
-<!-- SERVICE WORKER REGISTER -->
+<!-- SERVICE WORKER -->
 <script>
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js')
-  .then(() => console.log("SW Registered"));
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js')
+    .then(() => console.log("SW Registered"));
+  });
 }
 </script>
 
