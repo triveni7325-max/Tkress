@@ -1,8 +1,0 @@
-{
-  "name": "RESS App",
-  "short_name": "RESS",
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#dfe6ee",
-  "theme_color": "#5aa9ff"
-}
