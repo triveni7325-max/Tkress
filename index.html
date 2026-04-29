@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RESS App</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#5aa9ff">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background:#dfe6ee;
+}
+
+.header{
+    background: linear-gradient(90deg,#5aa9ff,#e6a37c);
+    padding:10px;
+    color:white;
+}
+
+.header-top{
+    display:flex;
+    justify-content:space-between;
+}
+
+.profile{
+    margin:15px;
+    border-radius:20px;
+    background:#d5dee8;
+    overflow:hidden;
+}
+
+.profile-head{
+    background:#1e56a0;
+    color:white;
+    padding:12px;
+    text-align:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    padding:12px;
+}
+
+.box{
+    background:#5aa9ff;
+    border-radius:22px;
+    height:110px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <div class="header-top">
+        ☰ <b>RESS</b> 🔔
+    </div>
+</div>
+
+<div class="profile">
+    <div class="profile-head">
+        WELCOME TRIVENI KUMAR
+    </div>
+</div>
+
+<div class="grid">
+    <div class="box">Bio Data</div>
+    <div class="box">Salary</div>
+    <div class="box">NPS</div>
+</div>
+
+<!-- SERVICE WORKER REGISTER -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+  .then(() => console.log("SW Registered"));
+}
+</script>
+
+</body>
+</html>
